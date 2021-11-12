@@ -1,0 +1,55 @@
+public class main {
+    public static void main(String[] args) {
+        Biblioteca biblioteca = new Biblioteca("La Libreria de Damian");
+        Autor a1 = new Autor("Miguel de Cervantes");
+        Autor a2 = new Autor("Jorge Luis Borges");
+        Autor a3 = new Autor("Billboard");
+        Autor a4 = new Autor("Vogue");
+        Autor a5 = new Autor("J.K Rowling");
+        Editorial ed1 = new Editorial("Santillana");
+        Editorial ed2 = new Editorial("Penguin");
+        Editorial ed3 = new Editorial("Billboard");
+        Editorial ed4 = new Editorial("Vogue");
+        Categoria cat1 = new Categoria("Novela");
+        Categoria cat2 = new Categoria("Poesia");
+        Categoria cat3 = new Categoria("Musica");
+        Categoria cat4 = new Categoria("Moda");
+        Libro l1 = new Libro("El Quijote", a1, ed1, cat1);
+        Libro l2 = new Libro("Ficciones", a2, ed2, cat2);
+        Libro l3 = new Libro("Harry Potter", a5, ed2, cat1);
+        Revista r1 = new Revista("Billboard", a3, ed3, cat3);
+        Revista r2 = new Revista("El Mundo", a4, ed4, cat4);
+        biblioteca.agregarPublicacion(l1);
+        biblioteca.agregarPublicacion(l2);
+        biblioteca.agregarPublicacion(l3);
+        biblioteca.agregarPublicacion(r1);
+        biblioteca.agregarPublicacion(r2);
+        Provincia prov1 = new Provincia("Cordoba");
+        Provincia prov2 = new Provincia("Buenos Aires");
+        Localidad loc1 = new Localidad("Cordoba", prov1);
+        Localidad loc2 = new Localidad("Mar del Plata", prov2);
+        Barrio b1 = new Barrio("Cerro de las Rosas", loc1);
+        Barrio b2 = new Barrio("San Martin", loc2);
+        Direccion d1 = new Direccion("Luis de Tejeda", b1);
+        Direccion d2 = new Direccion("Humberto 1", b2);
+        Cliente c1 = new Cliente("Juan Perez", "12345678", "juanperez@gmail.com", d1);
+        Cliente c2 = new Cliente("Pedro Perez", "87654321", "pedro.perez@gmail.com", d2);
+        biblioteca.agregarCliente(c1);
+        biblioteca.agregarCliente(c2);
+        Prestamo p1 = new Prestamo("11/11/11", "12/11/11", c1);
+        Prestamo p2 = new Prestamo("13/11/11", "14/11/11", c2);
+        p1.agregarPublicacion(l1);
+        p2.agregarPublicacion(r1);
+        biblioteca.prestarPublicacion(p1);
+        biblioteca.prestarPublicacion(p2);
+        System.out.println("Listado de publicaciones: " + biblioteca.getPublicaciones());
+        System.out.println("Cantidad de publicaciones: " + biblioteca.cantidadPublicaciones());
+        System.out.println("Cantidad de clientes: " + biblioteca.cantidadClientes());
+        System.out.println("Cantidad de libros: " + biblioteca.cantLibros());
+        System.out.println("Cantidad de revistas: " + biblioteca.cantRevistas());
+        System.out.println("Listado de prestamos: " + biblioteca.getPrestamos());
+        System.out.println("Cantidad de prestamos: " + biblioteca.cantidadPrestamos());
+        System.out.println("Clientes con prestamos de libros: " + biblioteca.clientesConPrestamoLibro());
+        System.out.println("Barrios con prestamos: " + biblioteca.barriosConPrestamos());
+    }
+}
