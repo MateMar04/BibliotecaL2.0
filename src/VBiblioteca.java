@@ -1,6 +1,6 @@
 import javax.swing.*;
 
-public class VBiblioteca {
+public class VBiblioteca extends javax.swing.JFrame {
     private JButton librosButton;
     private JButton revistasButton;
     private JButton clientesButton;
@@ -8,4 +8,12 @@ public class VBiblioteca {
     private JLabel lb_cantLibros;
     private JLabel lb_cantRevistas;
     private JLabel lb_cantClientes;
+    private JPanel panel1;
+
+    public VBiblioteca(Biblioteca biblioteca) {
+        setTitle("Biblioteca de Damian");
+        add(panel1);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setSize(400, 300);
+    }
 }

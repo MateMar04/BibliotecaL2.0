@@ -51,5 +51,7 @@ public class main {
         System.out.println("Cantidad de prestamos: " + biblioteca.cantidadPrestamos());
         System.out.println("Clientes con prestamos de libros: " + biblioteca.clientesConPrestamoLibro());
         System.out.println("Barrios con prestamos: " + biblioteca.barriosConPrestamos());
+        VBiblioteca vb = new VBiblioteca(biblioteca);
+        vb.setVisible(true);
     }
 }
