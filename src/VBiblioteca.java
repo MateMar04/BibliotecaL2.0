@@ -1,4 +1,6 @@
 import javax.swing.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class VBiblioteca extends javax.swing.JFrame {
     private JButton librosButton;
@@ -20,5 +22,33 @@ public class VBiblioteca extends javax.swing.JFrame {
         lb_cantLibros.setText(String.valueOf(biblioteca.cantLibros()));
         lb_cantRevistas.setText(String.valueOf(biblioteca.cantRevistas()));
         lb_cantClientes.setText(String.valueOf(biblioteca.cantidadClientes()));
+        clientesButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+
+                VClientes vClientes = new VClientes(biblioteca);
+                vClientes.setVisible(true);
+            }
+        });
+        ;
+        librosButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+
+                VLibros vLibros = new VLibros(biblioteca);
+                vLibros.setVisible(true);
+            }
+        });
+        revistasButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+
+                VRevistas vRevistas = new VRevistas(biblioteca);
+                vRevistas.setVisible(true);
+            }
+        });
     }
 }
