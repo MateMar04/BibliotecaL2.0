@@ -65,6 +65,10 @@ public class Biblioteca {
         return prestamos;
     }
 
+    public ArrayList<Cliente> getClientes() {
+        return clientes;
+    }
+
     public ArrayList<Cliente> clientesConPrestamoLibro() {
         ArrayList<Cliente> clientes = new ArrayList<Cliente>();
         for (Prestamo prestamo : prestamos) {
