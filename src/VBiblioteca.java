@@ -15,5 +15,10 @@ public class VBiblioteca extends javax.swing.JFrame {
         add(panel1);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setSize(400, 300);
+
+        lb_cantPublicaciones.setText(String.valueOf(biblioteca.cantidadPublicaciones()));
+        lb_cantLibros.setText(String.valueOf(biblioteca.cantLibros()));
+        lb_cantRevistas.setText(String.valueOf(biblioteca.cantRevistas()));
+        lb_cantClientes.setText(String.valueOf(biblioteca.cantidadClientes()));
     }
 }
