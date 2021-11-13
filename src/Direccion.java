@@ -17,9 +17,6 @@ public class Direccion {
 
     @Override
     public String toString() {
-        return "Direccion{" +
-                "calle='" + calle + '\'' +
-                ", barrio=" + barrio +
-                '}';
+        return calle + ", " + barrio;
     }
 }
