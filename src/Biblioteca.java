@@ -69,6 +69,26 @@ public class Biblioteca {
         return clientes;
     }
 
+    public ArrayList<Libro> getLibros() {
+        ArrayList<Libro> libros = new ArrayList<>();
+        for (Publicacion publicacion: publicaciones) {
+            if (publicacion instanceof Libro) {
+                libros.add((Libro) publicacion);
+            }
+        }
+        return libros;
+    }
+
+    public ArrayList<Revista> getRevistas() {
+        ArrayList<Revista> revistas = new ArrayList<>();
+        for (Publicacion publicacion: publicaciones) {
+            if (publicacion instanceof Libro) {
+                revistas.add((Revista) publicacion);
+            }
+        }
+        return revistas;
+    }
+
     public ArrayList<Cliente> clientesConPrestamoLibro() {
         ArrayList<Cliente> clientes = new ArrayList<Cliente>();
         for (Prestamo prestamo : prestamos) {
