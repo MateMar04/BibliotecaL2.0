@@ -71,7 +71,7 @@ public class Biblioteca {
 
     public ArrayList<Libro> getLibros() {
         ArrayList<Libro> libros = new ArrayList<>();
-        for (Publicacion publicacion: publicaciones) {
+        for (Publicacion publicacion : publicaciones) {
             if (publicacion instanceof Libro) {
                 libros.add((Libro) publicacion);
             }
@@ -81,8 +81,8 @@ public class Biblioteca {
 
     public ArrayList<Revista> getRevistas() {
         ArrayList<Revista> revistas = new ArrayList<>();
-        for (Publicacion publicacion: publicaciones) {
-            if (publicacion instanceof Libro) {
+        for (Publicacion publicacion : publicaciones) {
+            if (publicacion instanceof Revista) {
                 revistas.add((Revista) publicacion);
             }
         }

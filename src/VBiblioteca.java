@@ -16,7 +16,7 @@ public class VBiblioteca extends javax.swing.JFrame {
         setTitle("Biblioteca de Damian");
         add(panel1);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        setSize(400, 300);
+        setSize(500, 300);
 
         lb_cantPublicaciones.setText(String.valueOf(biblioteca.cantidadPublicaciones()));
         lb_cantLibros.setText(String.valueOf(biblioteca.cantLibros()));
@@ -31,7 +31,6 @@ public class VBiblioteca extends javax.swing.JFrame {
                 vClientes.setVisible(true);
             }
         });
-        ;
         librosButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {

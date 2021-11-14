@@ -15,7 +15,7 @@ public class VRevistas extends javax.swing.JFrame {
     public VRevistas(Biblioteca biblioteca) {
         setTitle("Biblioteca de Damian");
         add(panel1);
-        setSize(400, 300);
+        setSize(500, 300);
 
         ArrayList<Revista> revistas = biblioteca.getRevistas();
         Vector comboBoxItems = new Vector();

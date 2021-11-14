@@ -18,7 +18,7 @@ public class main {
         Libro l2 = new Libro("Ficciones", a2, ed2, cat2);
         Libro l3 = new Libro("Harry Potter", a5, ed2, cat1);
         Revista r1 = new Revista("Billboard", a3, ed3, cat3);
-        Revista r2 = new Revista("El Mundo", a4, ed4, cat4);
+        Revista r2 = new Revista("Vogue", a4, ed4, cat4);
         biblioteca.agregarPublicacion(l1);
         biblioteca.agregarPublicacion(l2);
         biblioteca.agregarPublicacion(l3);

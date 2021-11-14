@@ -15,10 +15,10 @@ public class VLibros extends javax.swing.JFrame {
     public VLibros(Biblioteca biblioteca) {
         setTitle("Biblioteca de Damian");
         add(panel1);
-        setSize(400, 300);
+        setSize(500, 300);
 
         ArrayList<Libro> libros = biblioteca.getLibros();
-        Vector comboBoxItems  = new Vector();
+        Vector comboBoxItems = new Vector();
         for (Libro libro : libros) {
             comboBoxItems.add(libro.getTitulo());
         }

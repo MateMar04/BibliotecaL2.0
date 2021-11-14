@@ -16,7 +16,7 @@ public class VClientes extends javax.swing.JFrame {
     public VClientes(Biblioteca biblioteca) {
         setTitle("Clientes");
         add(panel1);
-        setSize(400, 300);
+        setSize(500, 300);
 
         Vector comboBoxItems = new Vector();
         ArrayList<Cliente> clientes = biblioteca.getClientes();
