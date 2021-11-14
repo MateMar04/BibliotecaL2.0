@@ -28,13 +28,17 @@ public class VLibros extends javax.swing.JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (cb_libros.getSelectedIndex() != -1) {
-                    Libro libro = libros.get(cb_libros.getSelectedIndex());
-                    lb_titulo.setText(libro.getTitulo());
-                    lb_autor.setText(libro.getAutor().getNombre());
-                    lb_editorial.setText(libro.getEditorial().getNombre());
-                    lb_categoria.setText(libro.getCategoria().getNombre());
+                    obtenerLibro(libros);
                 }
             }
         });
+    }
+
+    private void obtenerLibro(ArrayList<Libro> libros) {
+        Libro libro = libros.get(cb_libros.getSelectedIndex());
+        lb_titulo.setText(libro.getTitulo());
+        lb_autor.setText(libro.getAutor().getNombre());
+        lb_editorial.setText(libro.getEditorial().getNombre());
+        lb_categoria.setText(libro.getCategoria().getNombre());
     }
 }

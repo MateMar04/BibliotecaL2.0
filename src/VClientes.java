@@ -32,11 +32,7 @@ public class VClientes extends javax.swing.JFrame {
         cb_clientes.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Cliente cliente = clientes.get(cb_clientes.getSelectedIndex());
-                lb_nombre.setText(cliente.getNombre());
-                lb_telefono.setText(cliente.getNumeroTelefono());
-                lb_direccion.setText(cliente.getDireccion().toString());
-                lb_mail.setText(cliente.getMail());
+                Cliente cliente = obtenerCliente(clientes);
 
                 Vector comboBoxItems = new Vector();
 
@@ -52,5 +48,14 @@ public class VClientes extends javax.swing.JFrame {
                 cb_publicaciones.setSelectedIndex(-1);
             }
         });
+    }
+
+    private Cliente obtenerCliente(ArrayList<Cliente> clientes) {
+        Cliente cliente = clientes.get(cb_clientes.getSelectedIndex());
+        lb_nombre.setText(cliente.getNombre());
+        lb_telefono.setText(cliente.getNumeroTelefono());
+        lb_direccion.setText(cliente.getDireccion().toString());
+        lb_mail.setText(cliente.getMail());
+        return cliente;
     }
 }

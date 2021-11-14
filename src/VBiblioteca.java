@@ -18,10 +18,8 @@ public class VBiblioteca extends javax.swing.JFrame {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setSize(500, 300);
 
-        lb_cantPublicaciones.setText(String.valueOf(biblioteca.cantidadPublicaciones()));
-        lb_cantLibros.setText(String.valueOf(biblioteca.cantLibros()));
-        lb_cantRevistas.setText(String.valueOf(biblioteca.cantRevistas()));
-        lb_cantClientes.setText(String.valueOf(biblioteca.cantidadClientes()));
+        mostrarBiblioteca(biblioteca);
+
         clientesButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -49,5 +47,12 @@ public class VBiblioteca extends javax.swing.JFrame {
                 vRevistas.setVisible(true);
             }
         });
+    }
+
+    private void mostrarBiblioteca(Biblioteca biblioteca) {
+        lb_cantPublicaciones.setText(String.valueOf(biblioteca.cantidadPublicaciones()));
+        lb_cantLibros.setText(String.valueOf(biblioteca.cantLibros()));
+        lb_cantRevistas.setText(String.valueOf(biblioteca.cantRevistas()));
+        lb_cantClientes.setText(String.valueOf(biblioteca.cantidadClientes()));
     }
 }

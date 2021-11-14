@@ -30,13 +30,17 @@ public class VRevistas extends javax.swing.JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (cb_revistas.getSelectedIndex() != -1) {
-                    Revista revista = revistas.get(cb_revistas.getSelectedIndex());
-                    lb_titulo.setText(revista.getTitulo());
-                    lb_autor.setText(revista.getAutor().getNombre());
-                    lb_editorial.setText(revista.getEditorial().getNombre());
-                    lb_categoria.setText(revista.getCategoria().getNombre());
+                    obtenerRevista(revistas);
                 }
             }
         });
+    }
+
+    private void obtenerRevista(ArrayList<Revista> revistas) {
+        Revista revista = revistas.get(cb_revistas.getSelectedIndex());
+        lb_titulo.setText(revista.getTitulo());
+        lb_autor.setText(revista.getAutor().getNombre());
+        lb_editorial.setText(revista.getEditorial().getNombre());
+        lb_categoria.setText(revista.getCategoria().getNombre());
     }
 }
